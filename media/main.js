@@ -207,6 +207,7 @@ if (typeof document !== 'undefined' && typeof acquireVsCodeApi !== 'undefined') 
   });
 
   render();
+  vscode.postMessage({ command: 'ready' });
 }
 
 if (typeof module !== 'undefined') module.exports = { replay, layout };
